@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Operation Room (air cargo)</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background-color: #f4f4f4;
+            padding: 1em;
+            text-align: center;
+            border-bottom: 4px solid #0077cc;
+        }
+        header img {
+            height: 60px;
+        }
+        h1 {
+            margin: 0.5em 0 0.2em;
+            color: #0077cc;
+        }
+        .container {
+            max-width: 800px;
+            margin: 2em auto;
+            padding: 2em;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #ffffff;
+        }
+        input[type="file"] {
+            margin: 1em 0;
+        }
+        button {
+            background-color: #0077cc;
+            color: white;
+            border: none;
+            padding: 0.7em 1.5em;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #005fa3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="/static/logo.jpeg" alt="Logo" />
+        <h1>Operation Room (air cargo)</h1>
+    </header>
+    <div class="container">
+        <h2>Upload Manifest File</h2>
+        <form action="/analyze" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" accept=".xlsx,.xls" required>
+            <br>
+            <button type="submit">Run Analysis</button>
+        </form>
+    </div>
+</body>
+</html>
